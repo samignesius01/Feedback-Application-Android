@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBF4A"
+    tools:context=".FeedbackActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFBF4A"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/sem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub"
+        android:layout_marginTop="100dp"
+        android:visibility="visible"
+        android:layout_below="@+id/sem"
+        />
+
+
+
+    <EditText
+        android:id="@+id/feedbackone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What is good in this course?"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_below="@+id/feedback" />
+
+    <EditText
+        android:id="@+id/feedbacktwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:hint="What can be improved or changed?"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/feedbackone"
+        />
+    <EditText
+        android:id="@+id/feedbackthree"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Any other comments?"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/feedbacktwo"
+        />
+
+    <Button
+        android:id="@+id/feedbacksubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@+id/feedbackthree"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+</RelativeLayout>
